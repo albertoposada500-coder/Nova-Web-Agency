@@ -1,4 +1,4 @@
-# 🌐 Nexus Dev Studio - Portafolio Personal
+# 🌐 Nova Web Agency - Portafolio Personal
 
 Sitio web de portafolio profesional desarrollado para exhibir proyectos de desarrollo de software, aplicaciones web y stack tecnológico.
 
