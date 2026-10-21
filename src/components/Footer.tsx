@@ -1,13 +1,13 @@
 import { MessageCircle, Mail, Github, MapPin } from 'lucide-react';
 import { WHATSAPP_URL, EMAIL, GITHUB_URL, LOCATION, navLinks } from '@/lib/data';
 
-function NDSLogoSmall() {
+function NovaWebLogoSmall() {
   return (
     <svg viewBox="0 0 48 48" className="w-9 h-9" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="2" width="44" height="44" rx="12" fill="white" stroke="#E2E8F0" strokeWidth="1.5" />
-      <path d="M10 34V14L18 28V14" stroke="#2563EB" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M22 14V34H27C30.866 34 34 30.866 34 27V21C34 17.134 30.866 14 27 14H22Z" stroke="#F97316" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="38" cy="18" r="3" fill="#2563EB" />
+      <rect x="2" y="2" width="44" height="44" rx="12" fill="#111827" stroke="#374151" strokeWidth="1.5" />
+      <path d="M10 34V14L18 28V14" stroke="#F97316" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M23 14V34M23 14H28C32 14 35 17 35 21V27C35 31 32 34 28 34H23" stroke="#FB923C" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="38" cy="10" r="2.5" fill="#F97316" />
     </svg>
   );
 }
@@ -26,10 +26,10 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <NDSLogoSmall />
+              <NovaWebLogoSmall />
               <div>
-                <div className="text-sm font-bold text-neutral-900 tracking-tight">NEXUS DEV STUDIO</div>
-                <div className="text-[10px] text-neutral-500">by Alberto Posada | Full-Stack Engineer</div>
+                <div className="text-sm font-bold text-neutral-900 tracking-tight">NOVA WEB</div>
+                <div className="text-[10px] text-neutral-500">TU IDEA, EN LA WEB</div>
               </div>
             </div>
             <p className="text-xs text-neutral-500 leading-relaxed max-w-xs">
@@ -102,7 +102,7 @@ export default function Footer() {
         {/* Divider + Copyright */}
         <div className="pt-6 border-t border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-neutral-500 text-center sm:text-left">
-            &copy; 2026 Nexus Dev Studio — Engineering & Design by Alberto Posada. Todos los
+            &copy; 2026 Nova Web — Engineering & Design by Alberto Posada. Todos los
             derechos reservados.
           </p>
           <div className="flex items-center gap-1.5 text-xs text-neutral-400">

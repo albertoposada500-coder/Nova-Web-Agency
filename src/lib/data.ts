@@ -1,5 +1,5 @@
 export const WHATSAPP_NUMBER = '573146856422';
-export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola Alberto, me gustaría agendar una llamada para conversar sobre un proyecto.')}`;
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola Nova Web, me gustaría agendar una llamada para conversar sobre un proyecto.')}`;
 export const EMAIL = 'albertoposada5000@gmail.com';
 export const GITHUB_URL = 'https://github.com/albertoposada500-coder';
 export const GITHUB_USERNAME = 'albertoposada500-coder';

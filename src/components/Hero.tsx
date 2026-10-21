@@ -45,6 +45,12 @@ export default function Hero() {
           animate="show"
           className="flex flex-col items-center text-center max-w-4xl mx-auto"
         >
+          {/* Brand lockup */}
+          <motion.div variants={item} className="mb-5 flex flex-col items-center">
+            <span className="text-sm font-bold tracking-[0.35em] text-neutral-900">NOVA WEB</span>
+            <span className="mt-2 text-[10px] font-semibold tracking-[0.28em] text-secondary-600">TU IDEA, EN LA WEB</span>
+          </motion.div>
+
           {/* Status Badge */}
           <motion.div
             variants={item}

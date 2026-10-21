@@ -18,13 +18,13 @@ Sitio web de portafolio profesional desarrollado para exhibir proyectos de desar
 Abre una terminal y ejecuta el siguiente comando:
 
 ```bash
-git clone https://github.com/albertoposada500-coder/nexus-dev-studio.git
+git clone https://github.com/albertoposada500-coder/nova-web.git
 ```
 
 ### 2. Ingresar a la carpeta del proyecto
 
 ```bash
-cd nexus-dev-studio
+cd nova-web
 ```
 
 ### 3. Instalar las dependencias
@@ -54,9 +54,7 @@ Después de ejecutar el comando anterior, la terminal mostrará una dirección l
 
 ## 🚀 Despliegue
 
-El proyecto está publicado en Vercel y puede consultarse desde el siguiente enlace:
-
-[https://nexus-dev-studio.vercel.app](https://nexus-dev-studio.vercel.app)
+El proyecto está publicado en Vercel y puede consultarse desde el enlace de producción configurado para Nova Web.
 
 ## 👨‍💻 Autor
 
