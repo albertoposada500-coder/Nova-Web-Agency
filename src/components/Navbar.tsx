@@ -51,7 +51,7 @@ export default function Navbar() {
             <span className="font-display text-sm md:text-base font-bold tracking-tight text-neutral-900 leading-none">
               NOVA WEB
             </span>
-            <span className="font-display text-sm md:text-base font-bold tracking-tight text-secondary-500 leading-none mt-1">
+            <span className="font-bold tracking-wider text-sm sm:text-base text-[#DB5227] mt-1 uppercase">
               TU IDEA, EN LA WEB
             </span>
           </div>

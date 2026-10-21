@@ -79,7 +79,7 @@ export default function Hero() {
           {/* Subtitle */}
           <motion.p
             variants={item}
-            className="font-display mt-6 text-lg sm:text-xl font-semibold text-neutral-100 max-w-2xl leading-relaxed"
+            className="text-lg sm:text-xl font-medium text-gray-200 mt-6 max-w-2xl mx-auto leading-relaxed"
           >
             Desarrollo web de élite para marcas que dominan su mercado: escalabilidad, velocidad y un diseño que convierte visitantes en clientes leales.
           </motion.p>
