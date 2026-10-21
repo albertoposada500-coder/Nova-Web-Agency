@@ -58,7 +58,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             <div className="flex-1 ml-3 h-4 rounded-sm bg-neutral-200/60" />
           </div>
           {/* Real screenshot image */}
-          <div className="relative w-full h-48 overflow-hidden bg-neutral-100">
+          <div className="relative w-full aspect-video overflow-hidden bg-neutral-100">
             <img
               src={project.imageUrl}
               alt={`${project.title} — preview`}
@@ -141,7 +141,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
             <ProjectCard key={project.id} project={project} index={idx} />
           ))}

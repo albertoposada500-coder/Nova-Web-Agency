@@ -22,7 +22,7 @@ export default function Footer() {
               <NovaWebLogoSmall />
               <div>
                 <div className="text-sm font-bold text-neutral-900 tracking-tight">NOVA WEB</div>
-                <div className="text-xs md:text-sm font-bold tracking-[0.12em] text-secondary-500">TU IDEA, EN LA WEB</div>
+                <div className="text-sm md:text-base font-bold tracking-tight text-secondary-500">TU IDEA, EN LA WEB</div>
               </div>
             </div>
             <p className="text-xs text-neutral-500 leading-relaxed max-w-xs">
