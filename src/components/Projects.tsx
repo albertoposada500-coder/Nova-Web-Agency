@@ -42,14 +42,14 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.6, delay: index * 0.15, ease: 'easeOut' }}
       whileHover={{ y: -8 }}
-      className={`glass-card glass-card-hover ${accent.border} group relative overflow-hidden`}
+      className={`glass-card glass-card-hover ${accent.border} group relative overflow-hidden min-w-0`}
     >
       {/* Gradient glow on hover */}
       <div className={`absolute -top-20 -right-20 w-40 h-40 rounded-full blur-[80px] ${accent.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
 
       <div className="relative p-6 md:p-7 flex flex-col h-full">
         {/* Preview mockup with real Unsplash image */}
-        <div className="relative mb-5 rounded-xl overflow-hidden bg-white border border-neutral-200 shadow-soft">
+        <div className="relative mb-5 rounded-xl overflow-hidden bg-[#121721] border border-white/10 shadow-black/30">
           {/* Browser window top bar */}
           <div className="flex items-center gap-1.5 px-4 py-2.5 border-b border-neutral-200 bg-neutral-50">
             <div className="w-2.5 h-2.5 rounded-full bg-error-400" />
@@ -141,7 +141,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {projects.map((project, idx) => (
             <ProjectCard key={project.id} project={project} index={idx} />
           ))}

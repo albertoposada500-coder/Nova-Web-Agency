@@ -3,7 +3,7 @@ import { ArrowRight, MessageCircle, Sparkles, Zap, Gauge, ShieldCheck } from 'lu
 import { WHATSAPP_URL } from '@/lib/data';
 
 const metrics = [
-  { icon: Zap, value: '+3', label: 'Proyectos en Producción' },
+  { icon: Zap, value: '+4', label: 'Proyectos en Producción' },
   { icon: Gauge, value: '100%', label: 'Core Web Vitals Optimization' },
   { icon: ShieldCheck, value: '24/7', label: 'Soporte & Mantenimiento Continuo' },
 ];
@@ -70,10 +70,10 @@ export default function Hero() {
             variants={item}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 leading-[1.15]"
           >
-            Diseñamos y Construimos{' '}
-            <span className="text-gradient">Software Scalable</span>,{' '}
-            <span className="text-gradient-secondary">Rápido</span> y Orientado a{' '}
-            <span className="text-gradient">Resultados</span>
+            Transformamos tu visión en una obra maestra digital{' '}
+            <span className="text-gradient">Desarrollo Web de Élite</span>,{' '}
+            <span className="text-gradient-secondary">Rápido</span> y Diseñado para{' '}
+            <span className="text-gradient">Convertir</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -81,8 +81,7 @@ export default function Hero() {
             variants={item}
             className="mt-6 text-base sm:text-lg text-neutral-500 max-w-2xl leading-relaxed"
           >
-            Ayudamos a empresas y emprendedores a convertir conceptos en plataformas web de
-            alto rendimiento, e-commerce masivos y sistemas de gestión a medida.
+            Desarrollo web de élite para marcas que dominan su mercado: escalabilidad, velocidad y un diseño que convierte visitantes en clientes leales.
           </motion.p>
 
           {/* CTA Buttons */}

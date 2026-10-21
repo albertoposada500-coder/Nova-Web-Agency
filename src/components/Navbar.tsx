@@ -4,14 +4,7 @@ import { Menu, X, MessageCircle } from 'lucide-react';
 import { navLinks, WHATSAPP_URL } from '@/lib/data';
 
 function NovaWebLogo() {
-  return (
-    <svg viewBox="0 0 48 48" className="w-10 h-10" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="2" width="44" height="44" rx="12" fill="#111827" stroke="#374151" strokeWidth="1.5" />
-      <path d="M10 34V14L18 28V14" stroke="#F97316" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M23 14V34M23 14H28C32 14 35 17 35 21V27C35 31 32 34 28 34H23" stroke="#FB923C" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="38" cy="10" r="2.5" fill="#F97316" />
-    </svg>
-  );
+  return <img src="/assets/images/NOVA_WEB,_estrella_sobre_planeta_oscuro.png" alt="Nova Web" className="h-10 w-10 rounded-xl object-cover" />;
 }
 
 export default function Navbar() {
@@ -37,8 +30,8 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-xl border-b border-neutral-200 shadow-soft'
-          : 'bg-white/60 backdrop-blur-sm'
+          ? 'bg-[#0A0C12]/90 backdrop-blur-xl border-b border-neutral-800 shadow-soft'
+          : 'bg-[#0A0C12]/70 backdrop-blur-sm'
       }`}
     >
       <nav className="container-max px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
@@ -58,7 +51,7 @@ export default function Navbar() {
             <span className="text-sm md:text-base font-bold tracking-tight text-neutral-900 leading-none">
               NOVA WEB
             </span>
-            <span className="text-[10px] md:text-xs text-neutral-500 leading-none mt-1">
+            <span className="text-xs md:text-sm font-bold tracking-[0.12em] text-secondary-500 leading-none mt-1">
               TU IDEA, EN LA WEB
             </span>
           </div>
@@ -95,7 +88,7 @@ export default function Navbar() {
         {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-white border border-neutral-200 text-neutral-700 hover:text-primary-700 transition-colors"
+          className="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-[#121721] border border-neutral-200 text-white hover:text-secondary-500 transition-colors"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

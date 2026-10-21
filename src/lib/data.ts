@@ -1,6 +1,6 @@
 export const WHATSAPP_NUMBER = '573146856422';
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola Nova Web, me gustaría agendar una llamada para conversar sobre un proyecto.')}`;
-export const EMAIL = 'albertoposada5000@gmail.com';
+export const EMAIL = 'novaweb.codeagency@gmail.com';
 export const GITHUB_URL = 'https://github.com/albertoposada500-coder';
 export const GITHUB_USERNAME = 'albertoposada500-coder';
 export const LOCATION = 'Cartagena, Colombia';
@@ -9,6 +9,7 @@ export const navLinks = [
   { label: 'Inicio', href: '#inicio' },
   { label: 'Proyectos', href: '#proyectos' },
   { label: 'Servicios', href: '#servicios' },
+  { label: 'Agentes de IA', href: '#inteligencia-artificial' },
   { label: 'Stack Técnico', href: '#stack' },
   { label: 'Contacto', href: '#contacto' },
 ];
@@ -26,6 +27,19 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    id: 'siralem-beachwear',
+    title: 'Siralem Beachwear',
+    subtitle: 'E-Commerce Exclusivo de Moda de Playa',
+    description:
+      'E-commerce exclusivo y moderno para marca de ropa de playa, con diseño inmersivo y optimizado para maximizar conversiones.',
+    keyPoints: ['Diseño inmersivo', 'Experiencia de compra fluida', 'Conversión optimizada'],
+    techStack: ['React', 'Tailwind CSS', 'Vercel', 'E-Commerce'],
+    demoUrl: 'https://siralem-web.vercel.app',
+    imageUrl: '/assets/images/NOVA_WEB,_estrella_sobre_planeta_oscuro.png',
+    accent: 'orange',
+  },
+
   {
     id: 'stockpro',
     title: 'StockPro Admin Dashboard',
@@ -88,21 +102,21 @@ export const services: Service[] = [
     icon: 'ShoppingBag',
     title: 'Desarrollo Web & E-Commerce a Medida',
     description:
-      'Tiendas virtuales y sitios corporativos enfocados en velocidad y conversión.',
+       'Creamos experiencias digitales de alto nivel que combinan una identidad visual memorable, navegación intuitiva y una arquitectura preparada para crecer. Cada tienda y sitio corporativo se construye para cargar rápido, comunicar valor y convertir visitas en oportunidades reales de negocio.',
     features: ['E-commerce escalable', 'Sitios corporativos premium', 'Optimización de conversión'],
   },
   {
     icon: 'LayoutDashboard',
     title: 'Sistemas Administrativos & Dashboards',
     description:
-      'Portales internos para gestión de inventario, ventas y datos operacionales.',
+       'Diseñamos centros de control inteligentes para que tu equipo entienda lo que ocurre y tome decisiones con precisión. Centralizamos inventario, ventas, operaciones y métricas clave en interfaces claras, rápidas y adaptadas a los procesos de tu empresa.',
     features: ['Gestión de inventario', 'Analítica en tiempo real', 'Reportes financieros'],
   },
   {
     icon: 'Workflow',
     title: 'Integración de APIs & Automatizaciones',
     description:
-      'Conexión con WhatsApp, inteligencia artificial (Gemini API) y pasarelas de pago.',
+       'Conectamos las herramientas que ya utilizas para eliminar tareas repetitivas y crear flujos que trabajan sin fricción. Integramos WhatsApp, inteligencia artificial, servicios externos y pasarelas de pago con seguridad, trazabilidad y una experiencia consistente.',
     features: ['WhatsApp API', 'Gemini AI Integration', 'Pasarelas de pago'],
   },
 ];
