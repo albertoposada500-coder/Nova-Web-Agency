@@ -36,7 +36,7 @@ export const projects: Project[] = [
     keyPoints: ['Diseño inmersivo', 'Experiencia de compra fluida', 'Conversión optimizada'],
     techStack: ['React', 'Tailwind CSS', 'Vercel', 'E-Commerce'],
     demoUrl: 'https://siralem-web.vercel.app',
-    imageUrl: '/assets/images/NOVA_WEB,_estrella_sobre_planeta_oscuro.png',
+    imageUrl: '/assets/images/projects/Captura_de_pantalla_2026-10-20_203007.png',
     accent: 'orange',
   },
 

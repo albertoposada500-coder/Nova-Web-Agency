@@ -68,7 +68,7 @@ export default function Hero() {
           {/* Headline */}
           <motion.h1
             variants={item}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 leading-[1.15]"
+            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 leading-[1.15]"
           >
             Transformamos tu visión en una obra maestra digital{' '}
             <span className="text-gradient">Desarrollo Web de Élite</span>,{' '}
@@ -79,7 +79,7 @@ export default function Hero() {
           {/* Subtitle */}
           <motion.p
             variants={item}
-            className="mt-6 text-base sm:text-lg text-neutral-500 max-w-2xl leading-relaxed"
+            className="font-display mt-6 text-lg sm:text-xl font-semibold text-neutral-100 max-w-2xl leading-relaxed"
           >
             Desarrollo web de élite para marcas que dominan su mercado: escalabilidad, velocidad y un diseño que convierte visitantes en clientes leales.
           </motion.p>

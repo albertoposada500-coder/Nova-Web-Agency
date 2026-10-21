@@ -48,10 +48,10 @@ export default function Navbar() {
             <NovaWebLogo />
           </div>
           <div className="flex flex-col">
-            <span className="text-sm md:text-base font-bold tracking-tight text-neutral-900 leading-none">
+            <span className="font-display text-sm md:text-base font-bold tracking-tight text-neutral-900 leading-none">
               NOVA WEB
             </span>
-            <span className="text-sm md:text-base font-bold tracking-tight text-secondary-500 leading-none mt-1">
+            <span className="font-display text-sm md:text-base font-bold tracking-tight text-secondary-500 leading-none mt-1">
               TU IDEA, EN LA WEB
             </span>
           </div>
