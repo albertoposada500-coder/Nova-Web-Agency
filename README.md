@@ -2,7 +2,7 @@
 
 Sitio web de portafolio profesional desarrollado para exhibir proyectos de desarrollo de software, aplicaciones web y stack tecnológico.
 
-🔗 **Enlace en producción:** [https://nexus-dev-studio.vercel.app](https://nexus-dev-studio.vercel.app)
+🔗 **Enlace en producción:** https://linktr.ee/NovaWebAgency
 
 ## 🛠️ Tecnologías Utilizadas
 
