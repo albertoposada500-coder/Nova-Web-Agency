@@ -45,6 +45,12 @@ export default function Navbar() {
             alt="Nova Web"
             className="h-10 w-10 rounded-xl object-cover transition-transform duration-300 group-hover:scale-105"
           />
+          <div className="flex flex-col">
+            <div>
+              <span className="text-white font-bold text-xl sm:text-2xl">NOVA </span><span className="text-[#DB5227] font-bold text-xl sm:text-2xl">WEB</span>
+            </div>
+            <div className="text-white font-bold text-sm tracking-widest uppercase mt-0.5">TU IDEA, EN LA WEB</div>
+          </div>
         </a>
 
         {/* Desktop Nav */}

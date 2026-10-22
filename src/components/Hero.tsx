@@ -45,38 +45,6 @@ export default function Hero() {
           animate="show"
           className="flex flex-col items-center text-center max-w-4xl mx-auto"
         >
-          {/* Brand lockup */}
-          <motion.div variants={item} className="mb-5 flex flex-col items-center">
-            <span className="text-sm font-bold tracking-[0.35em] text-neutral-900">NOVA WEB</span>
-            <span className="mt-2 text-[10px] font-semibold tracking-[0.28em] text-secondary-600">TU IDEA, EN LA WEB</span>
-          </motion.div>
-
-          {/* Status Badge */}
-          <motion.div
-            variants={item}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-neutral-200 shadow-soft mb-8"
-          >
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success-500" />
-            </span>
-            <span className="text-xs sm:text-sm text-neutral-600 font-medium">
-              Disponible para proyectos freelance, consultoría y roles de desarrollo
-            </span>
-          </motion.div>
-
-          <div className="flex flex-col items-center justify-center mb-8 text-center">
-            <img
-              src="/assets/images/NOVA_WEB,_estrella_sobre_planeta_oscuro.png"
-              alt="Nova Web"
-              className="w-28 h-28 sm:w-32 sm:h-32 object-contain"
-            />
-            <div className="text-3xl sm:text-4xl font-bold text-white mt-4 tracking-wide">NOVA WEB</div>
-            <div className="text-sm sm:text-base font-bold text-[#DB5227] tracking-[0.2em] mt-2 uppercase">
-              TU IDEA, EN LA WEB
-            </div>
-          </div>
-
           {/* Headline */}
           <motion.h1
             variants={item}
