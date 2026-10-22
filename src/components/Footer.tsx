@@ -1,10 +1,6 @@
 import { MessageCircle, Mail, Github, MapPin } from 'lucide-react';
 import { WHATSAPP_URL, EMAIL, GITHUB_URL, LOCATION, navLinks } from '@/lib/data';
 
-function NovaWebLogoSmall() {
-  return <img src="/assets/images/NOVA_WEB,_estrella_sobre_planeta_oscuro.png" alt="Nova Web" className="h-9 w-9 rounded-xl object-cover" />;
-}
-
 export default function Footer() {
   const handleNavClick = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
@@ -18,12 +14,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <NovaWebLogoSmall />
-              <div>
-                <div className="font-display text-sm font-bold text-neutral-900 tracking-tight">NOVA WEB</div>
-                <div className="font-bold tracking-wider text-sm sm:text-base text-[#DB5227] mt-1 uppercase">TU IDEA, EN LA WEB</div>
-              </div>
+            <div className="mb-4">
+              <img
+                src="/assets/images/NOVA_WEB,_estrella_sobre_planeta_oscuro.png"
+                alt="Nova Web"
+                className="h-9 w-9 rounded-xl object-cover"
+              />
             </div>
             <p className="text-xs text-neutral-500 leading-relaxed max-w-xs">
               Software & Web Development — Diseñamos y construimos plataformas web de alto

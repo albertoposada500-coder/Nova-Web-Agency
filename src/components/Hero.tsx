@@ -65,6 +65,18 @@ export default function Hero() {
             </span>
           </motion.div>
 
+          <div className="flex flex-col items-center justify-center mb-8 text-center">
+            <img
+              src="/assets/images/NOVA_WEB,_estrella_sobre_planeta_oscuro.png"
+              alt="Nova Web"
+              className="w-28 h-28 sm:w-32 sm:h-32 object-contain"
+            />
+            <div className="text-3xl sm:text-4xl font-bold text-white mt-4 tracking-wide">NOVA WEB</div>
+            <div className="text-sm sm:text-base font-bold text-[#DB5227] tracking-[0.2em] mt-2 uppercase">
+              TU IDEA, EN LA WEB
+            </div>
+          </div>
+
           {/* Headline */}
           <motion.h1
             variants={item}

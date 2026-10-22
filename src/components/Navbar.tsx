@@ -3,10 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, MessageCircle } from 'lucide-react';
 import { navLinks, WHATSAPP_URL } from '@/lib/data';
 
-function NovaWebLogo() {
-  return <img src="/assets/images/NOVA_WEB,_estrella_sobre_planeta_oscuro.png" alt="Nova Web" className="h-10 w-10 rounded-xl object-cover" />;
-}
-
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -44,17 +40,11 @@ export default function Navbar() {
           }}
           className="flex items-center gap-3 group"
         >
-          <div className="transition-transform duration-300 group-hover:scale-105">
-            <NovaWebLogo />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-display text-sm md:text-base font-bold tracking-tight text-neutral-900 leading-none">
-              NOVA WEB
-            </span>
-            <span className="font-bold tracking-wider text-sm sm:text-base text-[#DB5227] mt-1 uppercase">
-              TU IDEA, EN LA WEB
-            </span>
-          </div>
+          <img
+            src="/assets/images/NOVA_WEB,_estrella_sobre_planeta_oscuro.png"
+            alt="Nova Web"
+            className="h-10 w-10 rounded-xl object-cover transition-transform duration-300 group-hover:scale-105"
+          />
         </a>
 
         {/* Desktop Nav */}
