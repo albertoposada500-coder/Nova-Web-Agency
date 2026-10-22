@@ -45,6 +45,11 @@ export default function Hero() {
           animate="show"
           className="flex flex-col items-center text-center max-w-4xl mx-auto"
         >
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-700/80 bg-gray-800/30 text-xs sm:text-sm text-gray-300 mb-6">
+            <span className="w-2 h-2 rounded-full bg-green-500"></span>
+            <span>Disponible para proyectos freelance, consultoría y roles de desarrollo</span>
+          </div>
+
           {/* Headline */}
           <motion.h1
             variants={item}
