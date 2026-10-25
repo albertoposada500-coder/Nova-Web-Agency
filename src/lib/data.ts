@@ -69,7 +69,7 @@ export const projects: Project[] = [
     ],
     techStack: ['React', 'Tailwind CSS', 'Vercel', 'Glassmorphism'],
     demoUrl: 'https://apex-grooming-club.vercel.app',
-    imageUrl: '/assets/images/projects/apex.png',
+    imageUrl: 'https://i.ibb.co/kgDJxKC9/Captura-de-pantalla-2026-10-25-111744.png',
     accent: 'orange',
   },
   {
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     ],
     techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Lucide Icons', 'WhatsApp API'],
     demoUrl: 'https://nexus-gaming-tech.vercel.app',
-    imageUrl: '/assets/images/projects/nexus.png',
+    imageUrl: 'https://i.ibb.co/rGvWJh3X/Captura-de-pantalla-2026-10-25-111832.png',
     accent: 'teal',
   },
 ];
