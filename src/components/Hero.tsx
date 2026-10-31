@@ -3,7 +3,7 @@ import { ArrowRight, MessageCircle, Sparkles, Zap, Gauge, ShieldCheck } from 'lu
 import { WHATSAPP_URL } from '@/lib/data';
 
 const metrics = [
-  { icon: Zap, value: '+4', label: 'Proyectos en Producción' },
+  { icon: Zap, value: '+6', label: 'Proyectos en Producción' },
   { icon: Gauge, value: '100%', label: 'Core Web Vitals Optimization' },
   { icon: ShieldCheck, value: '24/7', label: 'Soporte & Mantenimiento Continuo' },
 ];

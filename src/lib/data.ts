@@ -85,8 +85,40 @@ export const projects: Project[] = [
     ],
     techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Lucide Icons', 'WhatsApp API'],
     demoUrl: 'https://nexus-gaming-tech.vercel.app',
-    imageUrl: 'https://i.ibb.co/rGvWJh3X/Captura-de-pantalla-2026-10-25-111832.png',
+    imageUrl: '/assets/images/projects/nexus.png',
     accent: 'teal',
+  },
+  {
+    id: 'apex-motors-lab',
+    title: 'Apex Motors Lab | Taller Automotriz',
+    subtitle: 'Plataforma Web de Diagnóstico y Agendamiento',
+    description:
+      'Sitio web corporativo de alta gama para taller automotriz, especializado en diagnóstico computarizado y mantenimiento avanzado. Cuenta con sistema de reservas directas por WhatsApp y seguimiento de vehículos en tiempo real.',
+    keyPoints: [
+      'Diseño industrial moderno y responsive',
+      'Sistema de agendamiento rápido',
+      'Enfoque en conversión y confianza del cliente',
+    ],
+    techStack: ['React', 'Tailwind CSS', 'Vercel', 'TypeScript'],
+    demoUrl: 'https://apex-motors-lab.vercel.app/',
+    imageUrl: '/assets/images/projects/apex-motors.png',
+    accent: 'blue',
+  },
+  {
+    id: 'alexandra',
+    title: 'Alexandra | Detalles & Estilo',
+    subtitle: 'E-Commerce y Catálogo de Regalos',
+    description:
+      'Tienda online elegante y atractiva enfocada en arreglos florales, detalles personalizados y experiencias memorables. Diseñada con una interfaz visual delicada, optimizada para móviles y con consulta directa de precios vía WhatsApp.',
+    keyPoints: [
+      'Catálogo visual interactivo',
+      'Experiencia de compra fluida y estética',
+      'Consulta directa y personalizada por WhatsApp',
+    ],
+    techStack: ['React', 'Tailwind CSS', 'Vercel', 'UI/UX'],
+    demoUrl: 'https://alexandra-detalles.vercel.app',
+    imageUrl: '/assets/images/projects/alexandra.png',
+    accent: 'orange',
   },
 ];
 
