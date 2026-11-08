@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nova Web · Enlaces</title>
+<meta name="description" content="Nova Web — Agencia de desarrollo web en Cartagena. Webs que se ven bien y venden mejor.">
+<link rel="icon" type="image/png" href="/assets/images/logo-circular.png">
+<meta property="og:title" content="Nova Web · Tu idea, en la web">
+<meta property="og:description" content="Agencia de desarrollo web en Cartagena. Webs que se ven bien y venden mejor.">
+<meta property="og:image" content="/assets/images/portada-enlaces.jpg">
+<style>
+/* ============================================================
+   ENLACES DE NOVA WEB  ·  novaweb-agency.vercel.app/enlaces
+   Para cambiar un enlace, edita los href de abajo en el HTML.
+   ============================================================ */
+@font-face{font-family:'Plus Jakarta Sans';font-weight:400;font-display:swap;src:url('fonts/plus-jakarta-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-weight:600;font-display:swap;src:url('fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-weight:700;font-display:swap;src:url('fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:600;font-display:swap;src:url('fonts/montserrat-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:700;font-display:swap;src:url('fonts/montserrat-latin-700-normal.woff2') format('woff2')}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;background:#06070c;min-height:100vh;min-height:100dvh}
+a{text-decoration:none;color:inherit}
+img{display:block}
+
+/* Fondo: portada difuminada (se ve en PC a los lados de la tarjeta) */
+.bg{position:fixed;inset:-40px;background:url('/assets/images/portada-enlaces.jpg') center/cover no-repeat;filter:blur(16px) saturate(1.1) brightness(.6);z-index:0}
+.vig{position:fixed;inset:0;background:radial-gradient(ellipse 70% 90% at 50% 50%,transparent 25%,rgba(6,7,12,.75));z-index:0}
+
+/* Tarjeta tipo celular centrada, como la de Almavitta: flota y se desplaza */
+.card{position:relative;z-index:1;width:100%;max-width:480px;margin:30px auto;border-radius:34px;background:#0A0C12;box-shadow:0 0 120px rgba(0,0,0,.8);overflow:hidden}
+@media (max-width:540px){.card{margin:0 auto;border-radius:0;min-height:100vh;min-height:100dvh}}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(2,54,97,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(2,54,97,.13) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
+.glow{position:absolute;inset:0;background:radial-gradient(ellipse 80% 30% at 50% 0%,rgba(2,54,97,.4),transparent),radial-gradient(ellipse 50% 22% at 90% 52%,rgba(219,82,39,.1),transparent);pointer-events:none}
+
+.hero{position:relative;height:230px;background:url('header.jpg') center 30%/cover no-repeat}
+.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,12,18,.05) 40%,rgba(10,12,18,.72) 78%,#0A0C12 100%)}
+
+.wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:0 22px 34px}
+.logo{width:100px;height:100px;border-radius:50%;margin-top:-50px;box-shadow:0 0 0 4px #0A0C12,0 0 0 6px rgba(232,105,63,.55),0 16px 40px rgba(0,0,0,.6)}
+.name{margin-top:16px;font-family:Montserrat,sans-serif;font-weight:700;font-size:23px;letter-spacing:.3em;padding-left:.3em}
+.name b{color:#DB5227;font-weight:700}
+.tag{margin-top:8px;font-family:Montserrat,sans-serif;font-weight:600;font-size:9px;letter-spacing:.42em;padding-left:.42em;color:#8d99a6}
+.bio{margin-top:14px;font-size:13.5px;color:#c7d0d8;text-align:center;line-height:1.6}
+.bio .hl{color:#E8693F;font-weight:600}
+.bio .loc{color:#8d99a6;font-size:13px}
+
+.links{margin-top:24px;display:flex;flex-direction:column;gap:14px;width:100%}
+.lc{display:flex;align-items:center;gap:14px;background:#131926;border:1px solid rgba(118,130,142,.22);border-radius:18px;padding:10px 15px 10px 10px;box-shadow:0 5px 0 rgba(0,0,0,.45),0 18px 40px rgba(0,0,0,.3);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.lc:hover{transform:translateY(-3px);border-color:rgba(232,105,63,.6);box-shadow:0 8px 0 rgba(0,0,0,.4),0 24px 50px rgba(219,82,39,.14)}
+.lc:active{transform:translateY(1px);box-shadow:0 2px 0 rgba(0,0,0,.45)}
+.lc.main{border-color:rgba(219,82,39,.6);box-shadow:0 5px 0 rgba(120,38,12,.55),0 18px 44px rgba(219,82,39,.14)}
+.thumb{width:50px;height:50px;border-radius:13px;object-fit:cover;flex:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.chip{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;flex:none}
+.chip.wa{background:linear-gradient(145deg,#1fbe5b,#128C4A)}
+.chip.fb{background:linear-gradient(145deg,#2d7ff0,#1559c7)}
+.lc>div{flex:1;min-width:0}
+.t{font-size:15px;font-weight:700}
+.s{font-size:11px;color:#76828E;margin-top:3px}
+.arrow{color:#E8693F;font-size:17px;margin-right:4px;transition:transform .25s ease}
+.lc:hover .arrow{transform:translateX(4px)}
+
+.chip.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.sign{margin-top:28px;font-family:Montserrat,sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.34em;padding-left:.34em;color:#E8693F;text-align:center}
+
+/* Remate: degradado a blanco al final de la tarjeta, como el inicio de la web */
+.horizon{position:relative;z-index:2;margin-top:34px;height:185px;background:linear-gradient(to bottom,rgba(248,250,252,0) 0%,rgba(248,250,252,.55) 45%,rgba(248,250,252,.92) 72%,#fbfcfe 100%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:30px}
+.url{font-family:Montserrat,sans-serif;font-weight:700;font-size:9px;letter-spacing:.3em;padding-left:.3em;color:#23272f;text-align:center}
+
+/* Animación de entrada escalonada */
+@media (prefers-reduced-motion: no-preference){
+  .up{opacity:0;transform:translateY(18px);animation:up .7s cubic-bezier(.22,.8,.3,1) forwards}
+  .hero{opacity:0;animation:fade 1s ease forwards}
+  .d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.42s}.d5{animation-delay:.54s}.d6{animation-delay:.66s}.d7{animation-delay:.78s}.d8{animation-delay:.9s}
+  @keyframes up{to{opacity:1;transform:none}}
+  @keyframes fade{to{opacity:1}}
+}
+</style>
+</head>
+<body>
+<div class="bg"></div><div class="vig"></div>
+<main class="card">
+  <div class="grid"></div><div class="glow"></div>
+  <div class="hero"></div>
+  <div class="wrap">
+    <img class="logo up d1" src="/assets/images/logo-circular.png" alt="Nova Web">
+    <h1 class="name up d2">NOVA <b>WEB</b></h1>
+    <div class="tag up d2">TU IDEA, EN LA WEB</div>
+    <p class="bio up d3"><span class="hl">Agencia de desarrollo web</span> · Webs que se ven bien y venden mejor<br><span class="loc">&#128205; Cartagena, Colombia</span></p>
+
+    <nav class="links">
+      <a class="lc main up d4" href="/" aria-label="Conoce nuestra web">
+        <img class="thumb" src="thumb-web.jpg" alt="">
+        <div><div class="t">Conoce nuestra web</div><div class="s">Servicios, proyectos y precios</div></div>
+        <span class="arrow">&#8594;</span>
+      </a>
+      <a class="lc up d5" href="/#proyectos" aria-label="Ver proyectos reales">
+        <img class="thumb" src="thumb-proy.jpg" alt="">
+        <div><div class="t">Ver proyectos reales</div><div class="s">Negocios que ya venden con su web</div></div>
+        <span class="arrow">&#8594;</span>
+      </a>
+      <a class="lc up d6" href="https://wa.me/573146856422?text=Hola%20Nova%20Web%2C%20vi%20su%20p%C3%A1gina%20de%20enlaces%20y%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp">
+        <span class="chip wa"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.84 9.84 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.82 9.82 0 0 1 9.89 9.9c0 5.45-4.44 9.87-9.9 9.87zm8.42-18.3A11.8 11.8 0 0 0 12.04 0C5.46 0 .1 5.35.1 11.93c0 2.1.55 4.16 1.6 5.97L0 24l6.26-1.64a11.93 11.93 0 0 0 5.78 1.47c6.58 0 11.94-5.35 11.94-11.93 0-3.19-1.24-6.19-3.5-8.44z"/></svg></span>
+        <div><div class="t">Escríbenos por WhatsApp</div><div class="s">Respuesta inmediata</div></div>
+        <span class="arrow">&#8594;</span>
+      </a>
+      <!-- PEGA AQUÍ EL ENLACE DE TU INSTAGRAM (reemplaza el href) -->
+      <a class="lc up d7" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram">
+        <span class="chip ig"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.8.72 1.47 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg></span>
+        <div><div class="t">Síguenos en Instagram</div><div class="s">Proyectos y detrás de cámaras</div></div>
+        <span class="arrow">&#8594;</span>
+      </a>
+      <!-- PEGA AQUÍ EL ENLACE DE TU PÁGINA DE FACEBOOK (reemplaza el href) -->
+      <a class="lc up d8" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook">
+        <span class="chip fb"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.09 24 18.1 24 12.07z"/></svg></span>
+        <div><div class="t">Síguenos en Facebook</div><div class="s">Novedades y proyectos nuevos</div></div>
+        <span class="arrow">&#8594;</span>
+      </a>
+    </nav>
+
+    <div class="sign up d8">— TU IDEA, EN LA WEB &#10022;</div>
+  </div>
+  <div class="horizon"><div class="url">NOVAWEB-AGENCY.VERCEL.APP</div></div>
+</main>
+</body>
+</html>
