@@ -1,17 +1,16 @@
 import { useState, type FormEvent } from 'react';
+import SectionHeader from '@/components/SectionHeader';
 import { motion } from 'framer-motion';
 import {
-  MessageCircle,
   Mail,
   Github,
   MapPin,
-  Send,
   CheckCircle2,
   AlertCircle,
-  Loader2,
   type LucideIcon,
 } from 'lucide-react';
-import { WHATSAPP_URL, EMAIL, GITHUB_URL, LOCATION } from '@/lib/data';
+import { WHATSAPP_URL, WHATSAPP_NUMBER, EMAIL, GITHUB_URL, LOCATION } from '@/lib/data';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 const projectTypes = [
   'Desarrollo Web & E-Commerce',
@@ -22,7 +21,7 @@ const projectTypes = [
 ];
 
 const contactChannels: {
-  icon: LucideIcon;
+  icon: LucideIcon | typeof WhatsAppIcon;
   label: string;
   value: string;
   href: string;
@@ -30,7 +29,7 @@ const contactChannels: {
   bg: string;
 }[] = [
   {
-    icon: MessageCircle,
+    icon: WhatsAppIcon,
     label: 'WhatsApp',
     value: '+57 314 685 6422',
     href: WHATSAPP_URL,
@@ -70,29 +69,37 @@ export default function Contact() {
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const buildWhatsAppLink = () => {
+    const lines = [
+      `Hola Nova Web, soy ${form.name.trim()}.`,
+      form.projectType ? `Tipo de proyecto: ${form.projectType}.` : '',
+      '',
+      form.message.trim(),
+      '',
+      form.email.trim() ? `Mi correo: ${form.email.trim()}` : '',
+    ].filter((l, i, arr) => !(l === '' && arr[i - 1] === ''));
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus('loading');
     setErrorMsg('');
-
-    try {
-      const response = await fetch('https://formspree.io/f/maeqbppo', {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: new FormData(e.currentTarget),
-      });
-
-      if (!response.ok) {
-        throw new Error('Formspree request failed');
-      }
-
-      setStatus('success');
-      setForm({ name: '', email: '', projectType: '', message: '' });
-    } catch {
+    const link = buildWhatsAppLink();
+    // Se abre en el mismo clic para que el navegador no lo bloquee como ventana emergente
+    const win = window.open(link, '_blank', 'noopener,noreferrer');
+    if (!win) {
       setStatus('error');
-      setErrorMsg('No se pudo enviar el mensaje. Intenta de nuevo o escríbeme por WhatsApp.');
+      setErrorMsg('El navegador bloqueó la ventana. Toca el botón de WhatsApp de la esquina o escríbenos al +57 314 685 6422.');
+      return;
     }
-  }; 
+    // Copia silenciosa al correo (no bloquea ni muestra error si falla)
+    fetch('https://formspree.io/f/maeqbppo', {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(e.currentTarget),
+    }).catch(() => undefined);
+    setStatus('success');
+  };
 
   return (
     <section id="contacto" className="relative section-padding overflow-hidden bg-neutral-50">
@@ -100,24 +107,11 @@ export default function Contact() {
       <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-secondary-500/6 rounded-full blur-[150px]" />
 
       <div className="container-max px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-14"
-        >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-50 border border-primary-100 mb-4">
-            <Send className="w-3.5 h-3.5 text-primary-600" />
-            <span className="text-xs font-medium text-primary-700">Contacto</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 tracking-tight">
-            Conversemos sobre tu <span className="text-gradient">Proyecto</span>
-          </h2>
-          <p className="mt-4 text-sm sm:text-base text-neutral-500 max-w-2xl mx-auto">
-            Cuéntame sobre tu idea y te responderé con un plan claro para hacerla realidad.
-          </p>
-        </motion.div>
+        <SectionHeader
+          eyebrow="06 — Contacto"
+          title={<>Conversemos sobre tu <span className="accent-word">proyecto</span></>}
+          subtitle="Cuéntanos tu idea y te respondemos con un plan claro, tiempos y precio."
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           {/* Contact Channels */}
@@ -137,7 +131,7 @@ export default function Contact() {
                 className="glass-card glass-card-hover p-4 flex items-center gap-4 group"
               >
                 <div className={`w-11 h-11 rounded-xl ${channel.bg} border flex items-center justify-center group-hover:scale-105 transition-transform duration-300 shrink-0`}>
-                  <channel.icon className={`w-5 h-5 ${channel.color}`} />
+                  <channel.icon size={20} className={`w-5 h-5 ${channel.color}`} />
                 </div>
                 <div className="min-w-0">
                   <div className="text-xs text-neutral-400">{channel.label}</div>
@@ -153,7 +147,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="glass-card glass-card-hover p-5 mt-2 flex flex-col items-center text-center gap-2 group"
             >
-              <MessageCircle className="w-8 h-8 text-success-600 group-hover:scale-110 transition-transform duration-300" />
+              <WhatsAppIcon size={32} className="text-[#25D366] group-hover:scale-110 transition-transform duration-300" />
               <div className="text-sm font-semibold text-neutral-900">Respuesta Inmediata por WhatsApp</div>
               <div className="text-xs text-neutral-500">Click para iniciar conversación</div>
             </a>
@@ -260,17 +254,17 @@ export default function Contact() {
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-success-600 shrink-0 mt-0.5" />
                     <p className="text-sm leading-relaxed text-success-700">
-                      ¡Mensaje enviado con éxito! Te responderé al correo en menos de 24 horas. Si necesitas una respuesta inmediata, puedes escribirme directamente a WhatsApp.
+                      Se abrió WhatsApp con tu mensaje listo: solo toca enviar y te respondemos en el chat. Si no se abrió, usa el botón de abajo.
                     </p>
                   </div>
                   <a
                     href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary mt-4 w-full sm:w-auto text-sm py-2.5"
+                    className="btn-whatsapp mt-4 w-full sm:w-auto text-sm py-2.5"
                   >
-                    <MessageCircle className="w-4 h-4" />
-                    Escribirme por WhatsApp
+                    <WhatsAppIcon size={16} />
+                    Abrir WhatsApp
                   </a>
                 </motion.div>
               )}
@@ -287,24 +281,14 @@ export default function Contact() {
                 </motion.div>
               )}
 
-              {/* Submit */}
-              <button
-                type="submit"
-                disabled={status === 'loading'}
-                className="btn-primary w-full disabled:opacity-60 disabled:cursor-not-allowed"
-              >
-                {status === 'loading' ? (
-                  <>
-                    <Loader2 className="w-5 h-5 animate-spin" />
-                    Enviando...
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5" />
-                    Enviar Mensaje
-                  </>
-                )}
+              {/* Enviar por WhatsApp */}
+              <button type="submit" className="btn-whatsapp w-full">
+                <WhatsAppIcon size={22} />
+                Enviar por WhatsApp
               </button>
+              <p className="text-center text-xs text-neutral-500">
+                Al enviar se abre WhatsApp con tu mensaje listo. Te respondemos por ahí.
+              </p>
             </form>
           </motion.div>
         </div>

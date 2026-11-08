@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 import { navLinks, WHATSAPP_URL } from '@/lib/data';
+import Brand from '@/components/Brand';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -38,19 +40,9 @@ export default function Navbar() {
             e.preventDefault();
             handleNavClick('#inicio');
           }}
-          className="flex items-center gap-3 group"
+          className="flex items-center group"
         >
-          <img
-            src="/assets/images/NOVA_WEB,_estrella_sobre_planeta_oscuro.png"
-            alt="Nova Web"
-            className="h-10 w-10 rounded-xl object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-          <div className="flex flex-col">
-            <div>
-              <span className="text-white font-bold text-xl sm:text-2xl">NOVA </span><span className="text-[#DB5227] font-bold text-xl sm:text-2xl">WEB</span>
-            </div>
-            <div className="text-white font-bold text-sm tracking-widest uppercase mt-0.5">TU IDEA, EN LA WEB</div>
-          </div>
+          <Brand />
         </a>
 
         {/* Desktop Nav */}
@@ -77,7 +69,7 @@ export default function Navbar() {
           rel="noopener noreferrer"
           className="hidden lg:inline-flex btn-primary text-sm py-2.5 px-5"
         >
-          <MessageCircle className="w-4 h-4" />
+          <WhatsAppIcon size={16} />
           Agendar Llamada
         </a>
 
@@ -121,7 +113,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="btn-primary text-sm mt-2"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon size={16} />
                 Agendar Llamada / Proyecto
               </a>
             </div>

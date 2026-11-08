@@ -23,104 +23,94 @@ export type Project = {
   techStack: string[];
   demoUrl: string;
   imageUrl: string;
-  accent: 'blue' | 'orange' | 'teal';
 };
 
-export const projects: Project[] = [
+/** Dominio que se muestra en la barra del navegador de la vista previa. */
+export const domainOf = (url: string) => url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+
+/** Negocios reales que ya usan su web. */
+export const realCases: Project[] = [
+  {
+    id: 'almavitta',
+    title: 'Almavitta',
+    subtitle: 'Repostería y heladería saludable · Manga, Cartagena',
+    description:
+      'Web a la medida de la marca, con catálogo de galletas y helados, carrito de pedidos con toppings por cada helado y envío del pedido completo por WhatsApp.',
+    keyPoints: ['Carrito con toppings por helado', 'Pedidos directos por WhatsApp', 'Diseño fiel a la marca'],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+    demoUrl: 'https://almavitta-bakery-spa.vercel.app/',
+    imageUrl: '/assets/images/projects/almavitta.jpg',
+  },
   {
     id: 'siralem-beachwear',
     title: 'Siralem Beachwear',
-    subtitle: 'E-Commerce Exclusivo de Moda de Playa',
+    subtitle: 'E-commerce de moda de playa',
     description:
-      'E-commerce exclusivo y moderno para marca de ropa de playa, con diseño inmersivo y optimizado para maximizar conversiones.',
-    keyPoints: ['Diseño inmersivo', 'Experiencia de compra fluida', 'Conversión optimizada'],
+      'Tienda en línea para una marca de ropa de playa, con un diseño inmersivo y una experiencia de compra pensada para convertir.',
+    keyPoints: ['Diseño inmersivo', 'Compra fluida', 'Optimizada para convertir'],
     techStack: ['React', 'Tailwind CSS', 'Vercel', 'E-Commerce'],
     demoUrl: 'https://siralem-web.vercel.app',
     imageUrl: '/assets/images/projects/Captura_de_pantalla_2026-10-20_203007.png',
-    accent: 'orange',
-  },
-
-  {
-    id: 'stockpro',
-    title: 'StockPro Admin Dashboard',
-    subtitle: 'Sistema de Gestión de Inventarios & Punto de Venta',
-    description:
-      'Panel administrativo para control masivo de stock, analítica de ingresos en tiempo real, gestión de catálogo y reportes financieros.',
-    keyPoints: [
-      'Renderizado ultra rápido',
-      'Control de estados complejos',
-      'Métricas interactivas en tiempo real',
-    ],
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-    demoUrl: 'https://stockpro-admin-dashboard.vercel.app',
-    imageUrl: '/assets/images/projects/stockpro.png',
-    accent: 'blue',
-  },
-  {
-    id: 'apex',
-    title: 'Apex Grooming Club',
-    subtitle: 'Plataforma Web Corporativa & Agendamiento',
-    description:
-      'Portal web de alta gama para salón de grooming masculino de lujo, con catálogo visual de servicios, precios y sistema de reservas optimizado para conversión.',
-    keyPoints: [
-      'UI/UX enfocado en retención de clientes',
-      'Diseño 100% responsivo',
-      'Sistema de reservas optimizado',
-    ],
-    techStack: ['React', 'Tailwind CSS', 'Vercel', 'Glassmorphism'],
-    demoUrl: 'https://apex-grooming-club.vercel.app',
-    imageUrl: 'https://i.ibb.co/kgDJxKC9/Captura-de-pantalla-2026-10-25-111744.png',
-    accent: 'orange',
-  },
-  {
-    id: 'nexus-gaming',
-    title: 'Nexus Gaming & Tech',
-    subtitle: 'E-Commerce Masivo de Hardware & Componentes',
-    description:
-      'Tienda virtual completa de tecnología con catálogo amplio (GPUs, CPUs, Portátiles), filtros dinámicos por categoría, precios en COP y pasarela de checkout directo por WhatsApp.',
-    keyPoints: [
-      'Filtrado instantáneo sin recarga',
-      'Arquitectura modular de productos',
-      'Checkout directo por WhatsApp',
-    ],
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Lucide Icons', 'WhatsApp API'],
-    demoUrl: 'https://nexus-gaming-tech.vercel.app',
-    imageUrl: '/assets/images/projects/nexus.png',
-    accent: 'teal',
-  },
-  {
-    id: 'apex-motors-lab',
-    title: 'Apex Motors Lab | Taller Automotriz',
-    subtitle: 'Plataforma Web de Diagnóstico y Agendamiento',
-    description:
-      'Sitio web corporativo de alta gama para taller automotriz, especializado en diagnóstico computarizado y mantenimiento avanzado. Cuenta con sistema de reservas directas por WhatsApp y seguimiento de vehículos en tiempo real.',
-    keyPoints: [
-      'Diseño industrial moderno y responsive',
-      'Sistema de agendamiento rápido',
-      'Enfoque en conversión y confianza del cliente',
-    ],
-    techStack: ['React', 'Tailwind CSS', 'Vercel', 'TypeScript'],
-    demoUrl: 'https://apex-motors-lab.vercel.app/',
-    imageUrl: '/assets/images/projects/apex-motors.png',
-    accent: 'blue',
   },
   {
     id: 'alexandra',
     title: 'Alexandra | Detalles & Estilo',
-    subtitle: 'E-Commerce y Catálogo de Regalos',
+    subtitle: 'Detalles, flores y regalos personalizados',
     description:
-      'Tienda online elegante y atractiva enfocada en arreglos florales, detalles personalizados y experiencias memorables. Diseñada con una interfaz visual delicada, optimizada para móviles y con consulta directa de precios vía WhatsApp.',
-    keyPoints: [
-      'Catálogo visual interactivo',
-      'Experiencia de compra fluida y estética',
-      'Consulta directa y personalizada por WhatsApp',
-    ],
+      'Tienda online para una marca de arreglos florales y detalles personalizados, con catálogo visual, diseño delicado y consulta directa de precios por WhatsApp.',
+    keyPoints: ['Catálogo visual interactivo', 'Consulta por WhatsApp', 'Optimizada para móvil'],
     techStack: ['React', 'Tailwind CSS', 'Vercel', 'UI/UX'],
     demoUrl: 'https://alexandra-detalles.vercel.app',
     imageUrl: '/assets/images/projects/alexandra.png',
-    accent: 'orange',
   },
 ];
+
+/** Proyectos de concepto: demos funcionales por sector. */
+export const demos: Project[] = [
+  {
+    id: 'stockpro',
+    title: 'StockPro Admin Dashboard',
+    subtitle: 'Inventario y punto de venta',
+    description: 'Panel administrativo con control de stock, ingresos en tiempo real, catálogo y reportes financieros.',
+    keyPoints: [],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS'],
+    demoUrl: 'https://stockpro-admin-dashboard.vercel.app',
+    imageUrl: '/assets/images/projects/stockpro.png',
+  },
+  {
+    id: 'apex',
+    title: 'Apex Grooming Club',
+    subtitle: 'Barbería premium y reservas',
+    description: 'Portal para un salón de grooming masculino con catálogo de servicios, precios y reservas.',
+    keyPoints: [],
+    techStack: ['React', 'Tailwind CSS', 'Vercel'],
+    demoUrl: 'https://apex-grooming-club.vercel.app',
+    imageUrl: 'https://i.ibb.co/kgDJxKC9/Captura-de-pantalla-2026-10-25-111744.png',
+  },
+  {
+    id: 'nexus-gaming',
+    title: 'Nexus Gaming & Tech',
+    subtitle: 'E-commerce de hardware',
+    description: 'Tienda de tecnología con catálogo amplio, filtros por categoría, precios en COP y checkout por WhatsApp.',
+    keyPoints: [],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS'],
+    demoUrl: 'https://nexus-gaming-tech.vercel.app',
+    imageUrl: '/assets/images/projects/nexus.png',
+  },
+  {
+    id: 'apex-motors-lab',
+    title: 'Apex Motors Lab',
+    subtitle: 'Taller automotriz',
+    description: 'Sitio para taller de diagnóstico y mantenimiento, con reservas por WhatsApp y seguimiento del vehículo.',
+    keyPoints: [],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS'],
+    demoUrl: 'https://apex-motors-lab.vercel.app/',
+    imageUrl: '/assets/images/projects/apex-motors.png',
+  },
+];
+
+/** Lista completa (compatibilidad). */
+export const projects: Project[] = [...realCases, ...demos];
 
 export type Service = {
   icon: string;

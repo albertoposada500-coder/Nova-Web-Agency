@@ -1,5 +1,7 @@
-import { MessageCircle, Mail, Github, MapPin } from 'lucide-react';
+import { Mail, Github, MapPin } from 'lucide-react';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 import { WHATSAPP_URL, EMAIL, GITHUB_URL, LOCATION, navLinks } from '@/lib/data';
+import Brand from '@/components/Brand';
 
 export default function Footer() {
   const handleNavClick = (href: string) => {
@@ -14,22 +16,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           {/* Brand */}
           <div>
-            <div className="mb-4 flex items-center gap-3">
-              <img
-                src="/assets/images/NOVA_WEB,_estrella_sobre_planeta_oscuro.png"
-                alt="Nova Web"
-                className="h-9 w-9 rounded-xl object-cover"
-              />
-              <div className="flex flex-col">
-                <div>
-                  <span className="text-white font-bold text-xl sm:text-2xl">NOVA </span><span className="text-[#DB5227] font-bold text-xl sm:text-2xl">WEB</span>
-                </div>
-                <div className="text-white font-bold text-sm tracking-widest uppercase mt-0.5">TU IDEA, EN LA WEB</div>
-              </div>
+            <div className="mb-5">
+              <Brand size="sm" />
             </div>
             <p className="text-xs text-neutral-500 leading-relaxed max-w-xs">
-              Software & Web Development — Diseñamos y construimos plataformas web de alto
-              rendimiento, e-commerce y sistemas a medida.
+              Estudio de desarrollo web. Diseñamos y construimos tiendas online, sitios corporativos y sistemas a medida.
             </p>
           </div>
 
@@ -67,7 +58,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-neutral-500 hover:text-success-600 transition-colors"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon size={16} className="w-4 h-4" />
                 +57 314 685 6422
               </a>
               <a
@@ -100,10 +91,7 @@ export default function Footer() {
             &copy; 2026 Nova Web — Engineering & Design by Alberto Posada. Todos los
             derechos reservados.
           </p>
-          <div className="flex items-center gap-1.5 text-xs text-neutral-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-success-500 animate-pulse" />
-            <span>Sistemas operando con normalidad</span>
-          </div>
+          <p className="text-xs text-neutral-400">Hecho a mano en Cartagena, Colombia.</p>
         </div>
       </div>
     </footer>

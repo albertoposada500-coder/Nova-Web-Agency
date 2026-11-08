@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Fuentes servidas desde el propio sitio (@fontsource en main.tsx): cargan más rápido */
 
 @tailwind base;
 @tailwind components;
@@ -57,6 +57,13 @@
 
   .btn-primary:hover { background: #ee6738; box-shadow: 0 16px 34px rgba(219, 82, 39, 0.36); }
 
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-white transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
+    background: #25D366;
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.28);
+  }
+  .btn-whatsapp:hover { background: #1fbe5b; box-shadow: 0 16px 34px rgba(37, 211, 102, 0.4); }
+
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
     color: #fff;
@@ -65,6 +72,12 @@
   }
 
   .btn-secondary:hover { border-color: #DB5227; background: rgba(219, 82, 39, 0.12); }
+  /* Marca: misma tipografía espaciada del logo */
+  .brand-word { font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.26em; font-weight: 600; }
+  .brand-tag { font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.34em; font-weight: 500; color: #8b97a5; }
+  .accent-word { color: #E8693F; }
+  .eyebrow { @apply inline-flex items-center gap-3 text-xs font-semibold uppercase; letter-spacing: 0.22em; color: #E8693F; }
+  .eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1px; background: #E8693F; }
   .section-padding { @apply px-4 sm:px-6 lg:px-8 py-20 md:py-28; }
   .container-max { @apply max-w-7xl mx-auto; }
 }

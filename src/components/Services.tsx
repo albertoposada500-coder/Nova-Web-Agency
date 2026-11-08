@@ -6,6 +6,7 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { services } from '@/lib/data';
+import SectionHeader from '@/components/SectionHeader';
 
 const iconMap: Record<string, LucideIcon> = {
   ShoppingBag,
@@ -20,25 +21,11 @@ export default function Services() {
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary-500/4 rounded-full blur-[150px]" />
 
       <div className="container-max px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-14"
-        >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-50 border border-secondary-100 mb-4">
-            <Workflow className="w-3.5 h-3.5 text-secondary-600" />
-            <span className="text-xs font-medium text-secondary-700">Servicios Corporativos</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 tracking-tight">
-            Soluciones <span className="text-gradient-secondary">a Medida</span>
-          </h2>
-          <p className="mt-4 text-sm sm:text-base text-neutral-500 max-w-2xl mx-auto">
-            Servicios de ingeniería de software diseñados para impulsar tu negocio con
-            tecnología moderna y arquitectura escalable.
-          </p>
-        </motion.div>
+        <SectionHeader
+          eyebrow="03 — Servicios"
+          title={<>Lo que <span className="accent-word">hacemos</span></>}
+          subtitle="Tres frentes, un mismo objetivo: que tu negocio funcione mejor en internet."
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {services.map((service, idx) => {
@@ -56,9 +43,10 @@ export default function Services() {
                 <div className="absolute -top-16 -right-16 w-32 h-32 bg-gradient-to-br from-primary-500/8 to-secondary-500/8 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
                 <div className="relative">
-                  {/* Icon */}
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-500/10 to-secondary-500/10 border border-primary-100 mb-5 group-hover:from-primary-500/15 group-hover:to-secondary-500/15 transition-all duration-500">
-                    {Icon && <Icon className="w-7 h-7 text-primary-600" />}
+                  {/* Número + icono sobrio */}
+                  <div className="mb-6 flex items-center justify-between">
+                    <span className="text-sm font-semibold text-neutral-500">0{idx + 1}</span>
+                    {Icon && <Icon className="w-6 h-6 text-[#E8693F]" strokeWidth={1.6} />}
                   </div>
 
                   {/* Title */}
@@ -75,7 +63,7 @@ export default function Services() {
                   <div className="space-y-2">
                     {service.features.map((feature) => (
                       <div key={feature} className="flex items-center gap-2">
-                        <div className="w-1 h-1 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500" />
+                        <div className="w-1 h-1 rounded-full bg-[#E8693F]" />
                         <span className="text-xs text-neutral-600">{feature}</span>
                       </div>
                     ))}
