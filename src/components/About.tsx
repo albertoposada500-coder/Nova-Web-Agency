@@ -51,21 +51,32 @@ export default function About() {
             transition={{ duration: 0.7, ease: 'easeOut' }}
             className="flex flex-col"
           >
-            <span className="eyebrow">Quién está detrás</span>
+            <span className="eyebrow">Sobre el fundador</span>
             <h2 className="mt-4 text-3xl sm:text-4xl md:text-[2.75rem] font-bold text-white tracking-tight leading-[1.1]">
-              Hola, soy <span className="accent-word">Alberto Posada</span>
+              Alberto Luis <span className="accent-word">Posada Pérez</span>
             </h2>
 
             <div className="mt-6 space-y-4 text-[#c7d0d8] text-base sm:text-lg leading-relaxed">
               <p>
-                Estudio Ingeniería de Sistemas y soy desarrollador full-stack. Fundé Nova Web para
-                que los negocios de aquí tengan webs al nivel de las grandes marcas, sin agencias
-                lejanas ni plantillas genéricas.
+                Soy desarrollador web y fundador de Nova Web. Empecé este proyecto con una
+                convicción simple: una buena página web no es un lujo de grandes marcas — es la
+                herramienta que hace crecer a{' '}
+                <span className="text-white font-medium">cualquier negocio</span>, desde una
+                heladería hasta una tienda de moda.
               </p>
               <p>
-                Cuando trabajas con nosotros hablas directamente conmigo: entiendo tu negocio,
-                diseño la solución y la construyo, cuidando la velocidad, el diseño y la
-                experiencia de tus clientes.
+                En Nova Web nos encargamos de todo el camino: escuchamos tu idea, diseñamos una
+                web elegante que refleja la personalidad de tu marca, y la construimos para que
+                cargue rápido, se vea perfecta en el celular y convierta visitas en clientes.{' '}
+                <span className="text-white font-medium">
+                  Tú no tienes que entender de tecnología — para eso estamos nosotros.
+                </span>
+              </p>
+              <p>
+                Lo que nos diferencia es el trato: aquí no hablas con un vendedor ni con una
+                agencia lejana, sino directamente con quien construye tu web. Te acompañamos
+                desde la primera idea hasta que tu página esté publicada y vendiendo — y
+                seguimos ahí cuando necesites crecer.
               </p>
             </div>
 
