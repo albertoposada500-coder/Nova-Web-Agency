@@ -101,7 +101,6 @@ export const realCases: Project[] = [
     imageUrl: '/assets/images/projects/fullclean.jpg',
     mobileImageUrl: '/assets/images/projects/fullclean-m.jpg',
     summary: 'Catálogo para empresas con buscador inteligente, presentaciones por producto y cotización completa por WhatsApp.',
-    fullImageUrl: '/assets/images/projects/fullclean-full.jpg',
   },
   {
     id: 'congo',

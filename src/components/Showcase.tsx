@@ -70,7 +70,7 @@ export default function Showcase({ items }: { items: Project[] }) {
 
   return (
     <div ref={root} className="nv-show" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-      <div className="grid items-center gap-8 lg:gap-14 lg:grid-cols-[0.9fr_1.25fr]">
+      <div className="grid items-center gap-8 lg:gap-14 2xl:gap-20 lg:grid-cols-[0.85fr_1.3fr]">
         {/* Texto */}
         <div className="order-2 lg:order-1 lg:min-h-[420px] flex flex-col justify-center" aria-live="polite">
           <AnimatePresence mode="wait" initial={false}>
@@ -94,7 +94,7 @@ export default function Showcase({ items }: { items: Project[] }) {
               <p className="mt-3 text-base font-semibold text-[#E8693F]">
                 {sector}{city && <span className="font-medium text-neutral-500"> · {city}</span>}
               </p>
-              <p className="mt-4 max-w-md text-[15px] sm:text-base leading-relaxed text-[#c7d0d8]">{p.summary ?? p.description}</p>
+              <p className="mt-4 max-w-lg text-[15px] sm:text-base leading-relaxed text-[#c7d0d8]">{p.summary ?? p.description}</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {p.keyPoints.map((k) => (
                   <span key={k} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs text-[#c7d0d8]">{k}</span>

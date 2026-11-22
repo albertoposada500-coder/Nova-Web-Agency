@@ -78,8 +78,9 @@
   .accent-word { color: #E8693F; }
   .eyebrow { @apply inline-flex items-center gap-3 text-xs font-semibold uppercase; letter-spacing: 0.22em; color: #E8693F; }
   .eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1px; background: #E8693F; }
-  .section-padding { @apply px-4 sm:px-6 lg:px-8 py-20 md:py-28; }
-  .container-max { @apply max-w-7xl mx-auto; }
+  .section-padding { @apply px-4 sm:px-6 lg:px-10 2xl:px-12 py-20 md:py-28; }
+  /* Ancho de contenido: aprovecha pantallas grandes sin que el texto se estire de más */
+  .container-max { @apply mx-auto; max-width: min(1560px, 100%); }
 }
 
 @layer utilities {
@@ -192,22 +193,22 @@
 
 /* Vitrina de casos reales */
 .nv-show__glow{position:absolute;inset:8% -4% 0 12%;background:radial-gradient(closest-side,rgba(219,82,39,.2),transparent);filter:blur(34px);pointer-events:none}
-.nv-show__phone{position:absolute;left:0;bottom:0;width:clamp(92px,13vw,168px);aspect-ratio:698/1399;border-radius:clamp(18px,2.2vw,28px);padding:clamp(4px,.5vw,6px);background:#0b0d12;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 60px -12px rgba(0,0,0,.75);overflow:hidden;z-index:2}
+.nv-show__phone{position:absolute;left:0;bottom:0;width:clamp(96px,12.5vw,200px);aspect-ratio:698/1399;border-radius:clamp(18px,2.2vw,28px);padding:clamp(4px,.5vw,6px);background:#0b0d12;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 60px -12px rgba(0,0,0,.75);overflow:hidden;z-index:2}
 .nv-show__phone img{position:absolute;inset:clamp(4px,.5vw,6px);width:calc(100% - 2*clamp(4px,.5vw,6px));height:calc(100% - 2*clamp(4px,.5vw,6px));object-fit:cover;object-position:top;border-radius:clamp(14px,1.8vw,22px)}
-.nv-show__tabs{margin-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
-.nv-tab{position:relative;text-align:left;padding:10px;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(18,23,33,.6);opacity:.6;transition:opacity .3s,border-color .3s,background .3s,transform .3s}
+.nv-show__tabs{margin-top:clamp(32px,4vw,56px);display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(12px,1.2vw,20px)}
+.nv-tab{position:relative;text-align:left;padding:clamp(10px,.9vw,14px);border-radius:16px;border:1px solid rgba(255,255,255,.08);background:rgba(18,23,33,.6);opacity:.6;transition:opacity .3s,border-color .3s,background .3s,transform .3s}
 .nv-tab:hover{opacity:.9;transform:translateY(-2px)}
-.nv-tab img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:8px;display:block}
-.nv-tab b{display:block;margin-top:9px;font-size:13px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.nv-tab small{display:block;margin-top:2px;font-size:11px;color:#8b97a5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nv-tab img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:10px;display:block}
+.nv-tab b{display:block;margin-top:12px;font-size:clamp(13.5px,1vw,15.5px);font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nv-tab small{display:block;margin-top:3px;font-size:clamp(11.5px,.8vw,13px);color:#8b97a5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .nv-tab.is-on{opacity:1;border-color:rgba(219,82,39,.55);background:rgba(219,82,39,.07)}
-.nv-tab.is-on::after{content:"";position:absolute;left:10px;right:10px;bottom:-1px;height:3px;border-radius:3px;background:rgba(255,255,255,.12)}
-.nv-tab__bar{position:absolute;left:10px;right:10px;bottom:-1px;height:3px;border-radius:3px;background:#DB5227;transform-origin:0 50%;transform:scaleX(1);z-index:1}
+.nv-tab.is-on::after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:3px;border-radius:3px;background:rgba(255,255,255,.12)}
+.nv-tab__bar{position:absolute;left:14px;right:14px;bottom:-1px;height:3px;border-radius:3px;background:#DB5227;transform-origin:0 50%;transform:scaleX(1);z-index:1}
 .nv-tab__bar.is-run{animation:nvTabBar linear forwards}
 @keyframes nvTabBar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @media (max-width:1023px){
   .nv-show__tabs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;margin-inline:-16px;padding-inline:16px}
   .nv-show__tabs::-webkit-scrollbar{display:none}
-  .nv-tab{flex:0 0 140px;scroll-snap-align:center}
+  .nv-tab{flex:0 0 172px;scroll-snap-align:center}
 }
 @media (prefers-reduced-motion:reduce){.nv-tab__bar.is-run{animation:none}}
