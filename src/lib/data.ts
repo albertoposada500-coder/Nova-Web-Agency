@@ -25,6 +25,10 @@ export type Project = {
   imageUrl: string;
   /** Captura de la página completa: al pasar el mouse, la vista previa la recorre. */
   fullImageUrl?: string;
+  /** Captura de la web en celular (vitrina de casos reales). */
+  mobileImageUrl?: string;
+  /** Frase corta para la vitrina. */
+  summary?: string;
 };
 
 /** Dominio que se muestra en la barra del navegador de la vista previa. */
@@ -42,6 +46,8 @@ export const realCases: Project[] = [
     techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
     demoUrl: 'https://almavitta-bakery-spa.vercel.app/',
     imageUrl: '/assets/images/projects/almavitta.jpg',
+    mobileImageUrl: '/assets/images/projects/almavitta-m.jpg',
+    summary: 'Catálogo de galletas y helados con carrito de toppings y pedido completo por WhatsApp.',
   },
   {
     id: 'siralem-beachwear',
@@ -53,6 +59,8 @@ export const realCases: Project[] = [
     techStack: ['React', 'Tailwind CSS', 'Vercel', 'E-Commerce'],
     demoUrl: 'https://siralem-web.vercel.app',
     imageUrl: '/assets/images/projects/siralem.jpg',
+    mobileImageUrl: '/assets/images/projects/siralem-m.jpg',
+    summary: 'Tienda en línea para una marca de ropa de playa tejida a mano, con un diseño inmersivo y compra fluida.',
   },
   {
     id: 'alexandra',
@@ -64,6 +72,8 @@ export const realCases: Project[] = [
     techStack: ['React', 'Tailwind CSS', 'Vercel', 'UI/UX'],
     demoUrl: 'https://alexandra-detalles.vercel.app',
     imageUrl: '/assets/images/projects/alexandra.png',
+    mobileImageUrl: '/assets/images/projects/alexandra-m.jpg',
+    summary: 'Catálogo visual delicado para arreglos florales y detalles, con consulta de precios directa por WhatsApp.',
   },
   {
     id: 'sneaker-catch',
@@ -75,6 +85,8 @@ export const realCases: Project[] = [
     techStack: ['Vite', 'JavaScript', 'Supabase', 'Vercel'],
     demoUrl: 'https://sneakercatch-web.vercel.app',
     imageUrl: '/assets/images/projects/sneakercatch.jpg',
+    mobileImageUrl: '/assets/images/projects/sneakercatch-m.jpg',
+    summary: 'Tienda de ofertas con presentación animada, tallas US traducidas a Colombia y panel propio para publicar ofertas.',
     fullImageUrl: '/assets/images/projects/sneakercatch-full.jpg',
   },
   {
@@ -87,6 +99,8 @@ export const realCases: Project[] = [
     techStack: ['Vite', 'JavaScript', 'CSS', 'Vercel'],
     demoUrl: 'https://fullclean-web.vercel.app',
     imageUrl: '/assets/images/projects/fullclean.jpg',
+    mobileImageUrl: '/assets/images/projects/fullclean-m.jpg',
+    summary: 'Catálogo para empresas con buscador inteligente, presentaciones por producto y cotización completa por WhatsApp.',
     fullImageUrl: '/assets/images/projects/fullclean-full.jpg',
   },
   {
@@ -99,6 +113,8 @@ export const realCases: Project[] = [
     techStack: ['Vite', 'JavaScript', 'CSS', 'Vercel'],
     demoUrl: 'https://congo-web-sepia.vercel.app',
     imageUrl: '/assets/images/projects/congo.jpg',
+    mobileImageUrl: '/assets/images/projects/congo-m.jpg',
+    summary: 'El cliente arma su retablo en la web, ve el precio por tamaño y envía el pedido directo por WhatsApp.',
   },
 ];
 

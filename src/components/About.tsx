@@ -3,7 +3,7 @@ import { MapPin, GraduationCap, Github, Mail, Camera } from 'lucide-react';
 import { GITHUB_URL, EMAIL, LOCATION } from '@/lib/data';
 
 /** Cambia esta ruta por tu foto real (p. ej. /assets/images/alberto.jpg). Vacía = espacio reservado. */
-const FOUNDER_PHOTO = '/assets/images/alberto-v2.jpg';
+const FOUNDER_PHOTO = '/assets/images/alberto-v3.jpg';
 
 export default function About() {
   return (
@@ -27,7 +27,7 @@ export default function About() {
 
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 bg-[#121721]">
                 {FOUNDER_PHOTO ? (
-                  <img src={FOUNDER_PHOTO} alt="Alberto Posada, fundador de Nova Web" width={864} height={1080} decoding="async" className="h-full w-full object-cover object-top" />
+                  <img src={FOUNDER_PHOTO} alt="Alberto Posada, fundador de Nova Web" width={1080} height={1350} decoding="async" className="h-full w-full object-cover object-top" />
                 ) : (
                   <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-[radial-gradient(circle_at_50%_30%,rgba(219,82,39,0.18),transparent_60%)] text-neutral-500">
                     <Camera className="h-10 w-10" strokeWidth={1.4} />

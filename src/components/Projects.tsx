@@ -10,6 +10,7 @@ const spot = (e: MouseEvent<HTMLElement>) => {
   e.currentTarget.style.setProperty('--my', `${e.clientY - r.top}px`);
 };
 import SectionHeader from '@/components/SectionHeader';
+import Showcase from '@/components/Showcase';
 
 function BrowserFrame({ project, tall }: { project: Project; tall?: boolean }) {
   return (
@@ -35,42 +36,6 @@ function BrowserFrame({ project, tall }: { project: Project; tall?: boolean }) {
         )}
       </div>
     </div>
-  );
-}
-
-function RealCaseCard({ project, index }: { project: Project; index: number }) {
-  return (
-    <motion.article
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.6, delay: index * 0.15, ease: 'easeOut' }}
-      whileHover={{ y: -6 }}
-      onMouseMove={spot}
-      className="nv-spot glass-card glass-card-hover group relative overflow-hidden p-5 md:p-6 flex flex-col"
-    >
-      <BrowserFrame project={project} />
-      <div className="mt-6 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6ee7a3]">
-        <span className="h-1.5 w-1.5 rounded-full bg-[#4ade80]" />
-        Cliente real · en producción
-      </div>
-      <h3 className="mt-2 text-xl font-bold text-white tracking-tight">{project.title}</h3>
-      <p className="mt-1 text-sm text-[#E8693F]">{project.subtitle}</p>
-      <p className="mt-3 text-sm text-[#c7d0d8] leading-relaxed">{project.description}</p>
-      <ul className="mt-5 mb-6 flex flex-wrap gap-x-5 gap-y-2">
-        {project.keyPoints.map((p) => (
-          <li key={p} className="flex items-center gap-1.5 text-sm text-neutral-500">
-            <Check className="h-4 w-4 text-[#E8693F]" /> {p}
-          </li>
-        ))}
-      </ul>
-      <div className="mt-auto flex flex-col items-start gap-4 pt-5 border-t border-white/10">
-        <span className="text-xs text-neutral-500">{project.techStack.join(' · ')}</span>
-        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="btn-primary py-2.5 px-5 text-sm">
-          Visitar la web <ArrowUpRight className="h-4 w-4" />
-        </a>
-      </div>
-    </motion.article>
   );
 }
 
@@ -115,11 +80,7 @@ export default function Projects() {
           title={<>Negocios que ya <span className="accent-word">venden con su web</span></>}
           subtitle="Proyectos hechos para clientes reales, publicados y funcionando hoy."
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
-          {realCases.map((p, i) => (
-            <RealCaseCard key={p.id} project={p} index={i} />
-          ))}
-        </div>
+        <Showcase items={realCases} />
 
         <SectionHeader
           className="mt-28 mb-12"
