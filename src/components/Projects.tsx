@@ -44,14 +44,14 @@ function RealCaseCard({ project, index }: { project: Project; index: number }) {
       <h3 className="mt-2 text-xl font-bold text-white tracking-tight">{project.title}</h3>
       <p className="mt-1 text-sm text-[#E8693F]">{project.subtitle}</p>
       <p className="mt-3 text-sm text-[#c7d0d8] leading-relaxed">{project.description}</p>
-      <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2">
+      <ul className="mt-5 mb-6 flex flex-wrap gap-x-5 gap-y-2">
         {project.keyPoints.map((p) => (
           <li key={p} className="flex items-center gap-1.5 text-sm text-neutral-500">
             <Check className="h-4 w-4 text-[#E8693F]" /> {p}
           </li>
         ))}
       </ul>
-      <div className="mt-6 flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-white/10 mt-auto">
+      <div className="mt-auto flex flex-col items-start gap-4 pt-5 border-t border-white/10">
         <span className="text-xs text-neutral-500">{project.techStack.join(' · ')}</span>
         <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="btn-primary py-2.5 px-5 text-sm">
           Visitar la web <ArrowUpRight className="h-4 w-4" />

@@ -50,7 +50,7 @@ export const realCases: Project[] = [
     keyPoints: ['Diseño inmersivo', 'Compra fluida', 'Optimizada para convertir'],
     techStack: ['React', 'Tailwind CSS', 'Vercel', 'E-Commerce'],
     demoUrl: 'https://siralem-web.vercel.app',
-    imageUrl: '/assets/images/projects/Captura_de_pantalla_2026-10-20_203007.png',
+    imageUrl: '/assets/images/projects/siralem.jpg',
   },
   {
     id: 'alexandra',
@@ -62,6 +62,39 @@ export const realCases: Project[] = [
     techStack: ['React', 'Tailwind CSS', 'Vercel', 'UI/UX'],
     demoUrl: 'https://alexandra-detalles.vercel.app',
     imageUrl: '/assets/images/projects/alexandra.png',
+  },
+  {
+    id: 'sneaker-catch',
+    title: 'Sneaker Catch',
+    subtitle: 'Sneakers traídos de Estados Unidos · Cartagena',
+    description:
+      'Tienda de ofertas de sneakers con presentación animada al deslizar, traductor de tallas US a Colombia y apartado de $100.000 por par, con panel propio para que el dueño publique sus ofertas.',
+    keyPoints: ['Animación a la medida de la marca', 'Tallas US traducidas a Colombia', 'Panel de administrador'],
+    techStack: ['Vite', 'JavaScript', 'Supabase', 'Vercel'],
+    demoUrl: 'https://sneakercatch-web.vercel.app',
+    imageUrl: '/assets/images/projects/sneakercatch.jpg',
+  },
+  {
+    id: 'full-clean',
+    title: 'Full Clean',
+    subtitle: 'Distribuidora de higiene institucional · Cartagena',
+    description:
+      'Catálogo para empresas con 33 productos, varias presentaciones por producto, buscador inteligente y una cotización que se arma en la web y llega completa por WhatsApp.',
+    keyPoints: ['Buscador inteligente', 'Presentaciones por producto', 'Cotización por WhatsApp'],
+    techStack: ['Vite', 'JavaScript', 'CSS', 'Vercel'],
+    demoUrl: 'https://fullclean-web.vercel.app',
+    imageUrl: '/assets/images/projects/fullclean.jpg',
+  },
+  {
+    id: 'congo',
+    title: 'Congo Agencia Creativa',
+    subtitle: 'Retablos, avisos y stickers · Sincelejo',
+    description:
+      'Web para un taller de impresión con retablos personalizados, precios claros por tamaño y un pedido que el cliente arma en la página y envía directo por WhatsApp.',
+    keyPoints: ['Arma tu retablo en la web', 'Precios por tamaño', 'Pedido directo por WhatsApp'],
+    techStack: ['Vite', 'JavaScript', 'CSS', 'Vercel'],
+    demoUrl: 'https://congo-web-sepia.vercel.app',
+    imageUrl: '/assets/images/projects/congo.jpg',
   },
 ];
 
