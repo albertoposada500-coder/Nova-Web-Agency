@@ -123,3 +123,69 @@
   .bg-warning-400 { background-color: #d6a63e !important; }
   .bg-success-400 { background-color: #4ade80 !important; }
 }
+
+
+/* =====================================================================
+   Nova Web · intro, planeta y efectos
+   ===================================================================== */
+/* Planeta del logo (horizonte con borde azul → naranja) */
+.nv-planet{position:absolute;left:50%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;pointer-events:none}
+.nv-planet__light,.nv-planet__body{position:absolute;inset:0;border-radius:50%}
+.nv-planet__light{overflow:visible}
+.nv-planet__body{background:radial-gradient(closest-side,#05070d 92%,#0a1426 97.5%,#16325e 99.4%,transparent 100%)}
+.nv-planet__rim,.nv-planet__glow{position:absolute;inset:0;border-radius:50%;background:linear-gradient(90deg,#1d4ed8 0%,#5fb4ff 30%,#dff3ff 49%,#ffb27a 56%,#ff7a3d 72%,#c2410c 100%)}
+.nv-planet__rim{-webkit-mask:radial-gradient(closest-side,transparent calc(100% - 3px),#000 calc(100% - 2px),#000 100%,transparent 100%);mask:radial-gradient(closest-side,transparent calc(100% - 3px),#000 calc(100% - 2px),#000 100%,transparent 100%)}
+.nv-planet__glow{filter:blur(18px);opacity:.9;-webkit-mask:radial-gradient(closest-side,transparent calc(100% - 26px),#000 calc(100% - 8px),#000 100%,transparent calc(100% + 1px));mask:radial-gradient(closest-side,transparent calc(100% - 26px),#000 calc(100% - 8px),#000 100%,transparent calc(100% + 1px))}
+.nv-planet__haze{position:absolute;left:50%;top:-140px;width:70%;height:280px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 60%,rgba(95,180,255,.22),rgba(232,105,63,.12) 45%,transparent 72%);filter:blur(10px)}
+.nv-planet__star{position:absolute;left:50%;top:0;width:var(--star,104px);height:var(--star,104px);transform:translate(-50%,-50%);overflow:visible;animation:nvStar 5s ease-in-out infinite}
+@keyframes nvStar{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.07)}}
+/* Portada: el planeta queda detrás de las cifras */
+.nv-hero-planet{top:-30px;width:max(1150px,190vw);z-index:0}
+@media (min-width:640px){.nv-hero-planet{width:max(1500px,188vw);--star:96px}}
+@media (max-width:639px){.nv-hero-planet{--star:84px}}
+.nv-sky{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(1px 1px at 12% 18%,#fff8,transparent),radial-gradient(1px 1px at 28% 42%,#fff6,transparent),radial-gradient(1.5px 1.5px at 72% 22%,#fff9,transparent),radial-gradient(1px 1px at 86% 48%,#fff6,transparent),radial-gradient(1px 1px at 52% 12%,#fff7,transparent),radial-gradient(1px 1px at 8% 66%,#fff5,transparent),radial-gradient(1.5px 1.5px at 92% 70%,#fff7,transparent),radial-gradient(1px 1px at 40% 30%,#fff5,transparent),radial-gradient(1px 1px at 64% 58%,#fff4,transparent)}
+
+/* Intro */
+.nv-ix{position:fixed;inset:0;z-index:9999;overflow:hidden;--bg:1;color:#fff}
+.nv-ix::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 45% at 50% 47%,#071027 0%,#03050a 70%);opacity:var(--bg)}
+.nv-ix__stars{position:absolute;inset:0;width:100%;height:100%}
+.nv-ix__scene{position:absolute;inset:0;transform-origin:50% 47%;will-change:transform}
+.nv-ix__planet{top:47%;width:max(1150px,160vw);transform-origin:50% 0}
+.nv-ix__planet .nv-planet__light{-webkit-mask-image:linear-gradient(90deg,transparent 44%,transparent 56%);mask-image:linear-gradient(90deg,transparent 44%,transparent 56%)}
+.nv-ix__planet .nv-planet__body{opacity:.35}
+.nv-ix__star{position:absolute;left:50%;top:47%;width:clamp(110px,10.5vw,150px);aspect-ratio:1;opacity:0;transform:translate(-50%,-50%) scale(.12)}
+.nv-ix__star svg{width:100%;height:100%;overflow:visible}
+.nv-ix__logo{position:absolute;left:50%;top:calc(47% + clamp(56px,7vh,84px));transform:translate(-50%,0);width:100%;text-align:center;z-index:2}
+.nv-ix__word{font-family:Montserrat,'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:clamp(25px,3.3vw,48px);letter-spacing:.42em;padding-left:.42em;white-space:nowrap}
+.nv-ix__ch{position:relative;display:inline-block}
+.nv-ix__ch.is-o{color:#DB5227}
+.nv-ix__fi{opacity:0;transition:opacity .18s}
+.nv-ix__gh{position:absolute;left:0;right:0;top:0;text-align:center;font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;font-weight:500;color:#7fc4ff;text-shadow:0 0 12px rgba(95,180,255,.6)}
+.nv-ix__ch.is-o .nv-ix__gh{color:#ffb27a;text-shadow:0 0 12px rgba(255,122,61,.6)}
+.nv-ix__tag{margin-top:clamp(12px,1.6vh,18px);font-family:Montserrat,sans-serif;font-weight:500;font-size:clamp(9.5px,.95vw,13px);letter-spacing:.62em;padding-left:.5em;color:#8b97a5;text-transform:uppercase;opacity:0}
+.nv-ix__meta{position:absolute;left:clamp(18px,3vw,40px);right:clamp(18px,3vw,40px);bottom:clamp(26px,4vh,40px);display:flex;justify-content:space-between;gap:16px;font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;font-size:11px;letter-spacing:.14em;color:rgba(199,208,216,.55);z-index:2;opacity:0}
+.nv-ix__bar{position:absolute;left:0;right:0;bottom:0;height:2px;background:rgba(255,255,255,.06);z-index:2}
+.nv-ix__bar div{height:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#1d4ed8,#5fb4ff 45%,#ffb27a 60%,#DB5227)}
+.nv-ix__skip{position:absolute;right:clamp(18px,3vw,40px);top:clamp(18px,3vh,28px);z-index:3;padding:8px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(3,5,10,.35);color:rgba(255,255,255,.75);font-size:12.5px;font-weight:600;letter-spacing:.04em;transition:background .2s,color .2s}
+.nv-ix__skip:hover{background:rgba(255,255,255,.1);color:#fff}
+@media (max-width:640px){.nv-ix__geo{display:none}.nv-ix__meta{justify-content:center}}
+
+/* Títulos: la palabra naranja se subraya sola al aparecer */
+.nv-ul .accent-word{position:relative}
+.nv-ul .accent-word::after{content:"";position:absolute;left:0;right:0;bottom:-.06em;height:.08em;border-radius:99px;background:linear-gradient(90deg,#E8693F,#ffb27a);transform:scaleX(0);transform-origin:0 50%;transition:transform 1s cubic-bezier(.16,1,.3,1) .35s}
+.is-in .nv-ul .accent-word::after,.nv-ul.is-in .accent-word::after{transform:scaleX(1)}
+
+/* Tarjetas: luz que sigue el cursor y recorrido de la web al pasar el mouse */
+.nv-spot::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,30%),rgba(255,160,110,.12),transparent 60%)}
+@media (hover:hover) and (pointer:fine){.nv-spot:hover::after{opacity:1}}
+.nv-full{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;opacity:0;transition:opacity .45s ease,object-position 0s .45s}
+@media (hover:hover) and (pointer:fine){
+  .group:hover .nv-full{opacity:1;object-position:50% 100%;transition:opacity .35s ease,object-position 7s cubic-bezier(.45,0,.55,1) .25s}
+  .group:hover .nv-has-full{opacity:0}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .nv-planet__star{animation:none}
+  .nv-ul .accent-word::after{transition:none;transform:scaleX(1)}
+  .group:hover .nv-full{transition:opacity .2s;object-position:50% 0}
+}

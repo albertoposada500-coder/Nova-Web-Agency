@@ -16,6 +16,8 @@
     <meta name="twitter:image" content="https://bolt.new/static/og_default.png" />
   </head>
   <body>
+    <div id="nv-boot" style="position:fixed;inset:0;z-index:9998;background:#03050a"></div>
+    <script>if(/[?&]nointro\b/.test(location.search)){document.getElementById('nv-boot').remove()}</script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

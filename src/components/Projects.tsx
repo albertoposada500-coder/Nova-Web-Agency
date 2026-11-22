@@ -1,6 +1,14 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Check } from 'lucide-react';
+import type { MouseEvent } from 'react';
 import { realCases, demos, domainOf, type Project } from '@/lib/data';
+
+/** Luz suave que sigue el cursor sobre la tarjeta (solo con mouse). */
+const spot = (e: MouseEvent<HTMLElement>) => {
+  const r = e.currentTarget.getBoundingClientRect();
+  e.currentTarget.style.setProperty('--mx', `${e.clientX - r.left}px`);
+  e.currentTarget.style.setProperty('--my', `${e.clientY - r.top}px`);
+};
 import SectionHeader from '@/components/SectionHeader';
 
 function BrowserFrame({ project, tall }: { project: Project; tall?: boolean }) {
@@ -19,8 +27,12 @@ function BrowserFrame({ project, tall }: { project: Project; tall?: boolean }) {
           src={project.imageUrl}
           alt={`Vista previa de ${project.title}`}
           loading="lazy"
-          className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
+          decoding="async"
+          className={`w-full h-full object-cover object-top transition-[transform,opacity] duration-700 ${project.fullImageUrl ? 'nv-has-full' : 'group-hover:scale-[1.04]'}`}
         />
+        {project.fullImageUrl && (
+          <img src={project.fullImageUrl} alt="" aria-hidden="true" loading="lazy" decoding="async" className="nv-full" />
+        )}
       </div>
     </div>
   );
@@ -34,7 +46,8 @@ function RealCaseCard({ project, index }: { project: Project; index: number }) {
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.6, delay: index * 0.15, ease: 'easeOut' }}
       whileHover={{ y: -6 }}
-      className="glass-card glass-card-hover group relative overflow-hidden p-5 md:p-6 flex flex-col"
+      onMouseMove={spot}
+      className="nv-spot glass-card glass-card-hover group relative overflow-hidden p-5 md:p-6 flex flex-col"
     >
       <BrowserFrame project={project} />
       <div className="mt-6 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6ee7a3]">
@@ -69,7 +82,8 @@ function DemoCard({ project, index }: { project: Project; index: number }) {
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.6, delay: index * 0.1, ease: 'easeOut' }}
       whileHover={{ y: -6 }}
-      className="glass-card glass-card-hover group relative overflow-hidden p-5 flex flex-col"
+      onMouseMove={spot}
+      className="nv-spot glass-card glass-card-hover group relative overflow-hidden p-5 flex flex-col"
     >
       <BrowserFrame project={project} />
       <h3 className="mt-5 text-lg font-bold text-white tracking-tight">{project.title}</h3>

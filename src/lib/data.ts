@@ -23,6 +23,8 @@ export type Project = {
   techStack: string[];
   demoUrl: string;
   imageUrl: string;
+  /** Captura de la página completa: al pasar el mouse, la vista previa la recorre. */
+  fullImageUrl?: string;
 };
 
 /** Dominio que se muestra en la barra del navegador de la vista previa. */
@@ -73,6 +75,7 @@ export const realCases: Project[] = [
     techStack: ['Vite', 'JavaScript', 'Supabase', 'Vercel'],
     demoUrl: 'https://sneakercatch-web.vercel.app',
     imageUrl: '/assets/images/projects/sneakercatch.jpg',
+    fullImageUrl: '/assets/images/projects/sneakercatch-full.jpg',
   },
   {
     id: 'full-clean',
@@ -84,6 +87,7 @@ export const realCases: Project[] = [
     techStack: ['Vite', 'JavaScript', 'CSS', 'Vercel'],
     demoUrl: 'https://fullclean-web.vercel.app',
     imageUrl: '/assets/images/projects/fullclean.jpg',
+    fullImageUrl: '/assets/images/projects/fullclean-full.jpg',
   },
   {
     id: 'congo',
@@ -118,7 +122,7 @@ export const demos: Project[] = [
     keyPoints: [],
     techStack: ['React', 'Tailwind CSS', 'Vercel'],
     demoUrl: 'https://apex-grooming-club.vercel.app',
-    imageUrl: 'https://i.ibb.co/kgDJxKC9/Captura-de-pantalla-2026-10-25-111744.png',
+    imageUrl: '/assets/images/projects/apex.jpg',
   },
   {
     id: 'nexus-gaming',
