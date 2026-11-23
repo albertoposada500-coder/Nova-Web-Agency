@@ -32,7 +32,9 @@ export default function Intro() {
   useEffect(() => {
     document.getElementById('nv-boot')?.remove();
     const html = document.documentElement;
-    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    /* Con ahorro de batería (animaciones reducidas) también se reproduce completa: es corta, no se repite
+       y es la entrada de la marca. Antes en ese modo quedaba en negro y desaparecía. */
+    const reduced = false;
     if (new URLSearchParams(location.search).has('nointro')) { setGone(true); markIntroDone(); return; }
     html.style.overflow = 'hidden';
 
